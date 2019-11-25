@@ -18,7 +18,6 @@ using System.IO;
 namespace NotePaadi1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -33,7 +32,6 @@ namespace NotePaadi1
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            // MessageBox.Show("Exit");
             Close();
         }
 
@@ -87,12 +85,7 @@ namespace NotePaadi1
             Window1 mywindow = new Window1();
             mywindow.ShowDialog();
 
-            //textBox1.Text = mywindow.NewWindowTextBox.Text;
             textBox1.FontSize = Convert.ToInt32(mywindow.NewWindowTextBox.Text);
-            // mywindow.NewWindowTextBox.Text;
-
-
-
         }
 
         // COPY 
@@ -102,7 +95,6 @@ namespace NotePaadi1
             if (textBox1.SelectedText != string.Empty)
                 Clipboard.SetData(DataFormats.Text, textBox1.SelectedText);
         }
-
         // PASTE
         private void paste_Click(object sender, RoutedEventArgs e)
         {
